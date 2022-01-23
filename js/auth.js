@@ -35,7 +35,7 @@ $(document).ready(() => {
 
   $('.home').click((e)=>{
     e.preventDefault()
-    location.replace('/summary.html')
+    location.replace('summary.html')
   })
 
   $('#submitbtn').click(e => {
@@ -145,7 +145,7 @@ function SignupUser (q) {
       console.log(f)
       CreateUser(f)
       info.reset()
-      location.replace('/summary.html')
+      location.replace('summary.html')
     })
     .catch(err => {
       console.log(err.message.replace('Firebase:',''))
@@ -157,7 +157,7 @@ function LoginUser () {
   signInWithEmailAndPassword(auth, q.email)
     .then(response => {
       console.log('Signed you in successfully')
-      location.replace('/summary.html')
+      location.replace('summary.html')
     })
     .catch(err => {
       console.log('Error:', err.message)
